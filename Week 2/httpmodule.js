@@ -12,7 +12,10 @@ const server = http.createServer((req, res)=> {
     // lets try to send back an html file
     console.log(req.url);
     if(req.url === "/") {
-        //we want to send an html
+        //we want to send an html file
+        const filePath = path.join(__dirname, "index.html");
+        //give that path to fs.readFile()
+        fs.readFile(filePath, "utf8", )
     }
     //this is an endpoint
     if(req.url === "/test"){
